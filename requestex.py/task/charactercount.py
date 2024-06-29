@@ -1,10 +1,9 @@
+from collections import defaultdict
 def count_characters(text):
-    char_count={}
+    char_count=defaultdict(int)
     for char in text:
-        if char in char_count:
-            char_count[char]+=1
-        else:
-            char_count[char]=1
+        char_count[char] += 1
+
     return char_count
 
 # Ask the user for input
